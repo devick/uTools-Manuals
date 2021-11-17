@@ -13,12 +13,12 @@
         {
             "code": "options",
             "explain": "调整程序员手册的功能",
-            "cmds": [ "手册设置", "ManualOptions" ]
+            "cmds": [ "my手册设置", "ManualOptions" ]
         },
         {
             "code": "dash",
             "explain": "打开dash 或 zeal 进行搜索",
-            "cmds": [ "dash", "zeal" ],
+            "cmds": [ "mydash", "myzeal" ],
             "icon": "logo/dash.png"
         }
     ]

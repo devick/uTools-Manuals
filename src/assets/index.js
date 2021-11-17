@@ -84,6 +84,7 @@ showManual = path => {
             var f = window.manualVars.dirs.idxFile ? path : path + '.html';
         }
         var file = `${window.manualVars.dirs.docPath}/${f}`;
+        window.utools.showNotification(file)
         $("#mainlist").fadeOut();
         $(".load").html('Loading').show();
         var request = $.ajax({
@@ -225,7 +226,9 @@ utools.onPluginEnter(async ({ code, type, payload }) => {
             case "devdocs":
                 assetDir = '';
                 window.manualVars.dirs = {
-                    docPath: allFts[code].url.slice(0, -11),
+                    // docPath: allFts[code].url.slice(0, -11),
+                    // docPath: "https://devdocs.io/leaflet~1.7/",
+                    docPath: "https://documents.devdocs.io"+allFts[code].url.slice(0,-11).slice(23),
                 }
                 break;
         }
